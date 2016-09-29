@@ -1,0 +1,59 @@
+@model MovieDb.Models.Movie
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Izbrisi film</h2>
+
+<h3>Jeste sigurni da zelite izbrisati film?</h3>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReleaseDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Genre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Grade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Grade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Director)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Director)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Actors)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Actors)
+        </dd>
+        
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Izbrisi" class="btn btn-default" />
+            <a asp-action="Index">Povratak na listu</a>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,57 @@
+@model MovieDb.Models.Movie
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Detalji</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReleaseDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Genre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Grade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Grade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Director)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Director)
+        </dd>
+        
+        
+       
+        <dt>
+            @Html.DisplayNameFor(model => model.Actors)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Actors)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Promijeni</a> |
+    <a asp-action="Index">Povratak na popis</a>
+</div>
